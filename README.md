@@ -5,7 +5,7 @@ Compatibility-based "FriendFinder" application -- basically a dating app. This f
 
 ## Look Attttt It
 Deployed App
-Here is the link to the deployed applications--> https://baileemmanzer.github.io/FriendFinder/
+Here is the link to the deployed applications--> https://boiling-caverns-58587.herokuapp.com/
 
 
 ![image](images/FriendFinder.png)
