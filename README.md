@@ -1,17 +1,17 @@
 # FriendFinder
 
-##About 
+## About 
 Compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 You will use Express to handle routing. Make sure you deploy your app to Heroku so other users can fill it out.
 
-##Look Attttt It
+## Look Attttt It
 Deployed App
 Here is the link to the deployed applications--> GITHUB IO LINK
 
 
 ![image](images/FriendFinder.png)
 
-##Usage
+## Usage
 1. Clone the FriendFinder repository
 2. Run npm i to install 
 3. Run npm start to start the application
@@ -21,7 +21,7 @@ On the home page there is a button called "Go to Survey". Once you click the but
 
 You can also access the API by clicking on the "API Friends List" at the bottom of the page or the GitHub Repository by clicking on that link.  
 
-##Technologies
+## Technologies
 1. JavaScript
 2. jQuery
 3. Node
