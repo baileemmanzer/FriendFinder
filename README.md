@@ -8,7 +8,7 @@ You will use Express to handle routing. Make sure you deploy your app to Heroku 
 Deployed App
 Here is the link to the deployed applications--> GITHUB IO LINK
 
-SCREENSHOT 1:
+
 ![image](images/FriendFinder.png)
 
 ##Usage
