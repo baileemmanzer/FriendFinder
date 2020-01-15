@@ -10,24 +10,35 @@ app.get("/api/friends", function(req, res) {
 
 //A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
 app.post("/api/friends", function(req, res) {
-    var score = 41;
-    var userScores = 0;
-    var bestFriend;
-    for (var i = 0; i < req.body.scores.length; i++) {
-        userScores += req.body.scores[i];
-    }
-    for (var i = 0; i < friends.length; i++) {
-        var friendScores = 0;
-        for (var x = 0; x < friends[i].scores.length; x++){
-            friendScores += friends[i].scores[x];
+    friends.push(req.body)
+    
+    var userAnswers = req.body.answers;
+    var bestFriend = [];
+    //tempMatch holds the friends array object that will be compared
+    var tempMatch = [];
+    //tempAnswers holds the array of answers from the friends array as its being compared to the user answers
+    var tempAnswers = [];
+
+    var currentCount = 100;
+
+    for (var i = 0; i < friends.length -1; i++) {
+        tempMatch = friends[i];
+        tempAnswers = friends[i]. answers;
+        var newCount = 0;
+
+        for (var i = 0; i < tempAnswers.length; i++) {
+            newCount += Math.abs(parseInt(tempAnswers[i]) - parseInt(userAnswers[i]))
         }
-        var sum = Math.abs(friendScores - userScores);
-        if (sum < score) {
-            bestFriend = i;
-            score = sum;
+        if (newCount < currentCount) {
+            finalMatch.shift();
+            finalMatch.push(tempMatch);
+            currentCount = newCount;
         }
     }
-    res.json(friends[bestFriend]);
+
+    res.json(finalMatch);
     friends.push(req.body);
-});
+    });
 }
+
+    
