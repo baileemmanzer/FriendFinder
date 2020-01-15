@@ -30,13 +30,13 @@ app.post("/api/friends", function(req, res) {
             newCount += Math.abs(parseInt(tempAnswers[i]) - parseInt(userAnswers[i]))
         }
         if (newCount < currentCount) {
-            finalMatch.shift();
-            finalMatch.push(tempMatch);
+            bestFriend.shift();
+            bestFriend.push(tempMatch);
             currentCount = newCount;
         }
     }
 
-    res.json(finalMatch);
+    res.json(bestFriend);
     friends.push(req.body);
     });
 }
