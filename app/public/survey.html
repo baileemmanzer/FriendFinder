@@ -217,8 +217,8 @@ $("#submit").on("click", function(event) {
             $("#q10").val(),
         ]
     };
-
-    $.post("api/friends", userData, function(data) {
+    
+    $.post("/api/friends", userData, function(data) {
         $("#bestFriendName").text(data.name);
         $("#bestFriendImage").attr("src", data.photo);
 
