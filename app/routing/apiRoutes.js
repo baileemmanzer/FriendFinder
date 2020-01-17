@@ -14,7 +14,7 @@ app.post("/api/friends", function(req, res) {
     var userAnswers = req.body.scores;
     var bestFriend;
     //tempMatch holds the friends array object that will be compared
-    var tempMatch = [];
+    var tempMatch;
     //tempAnswers holds the array of answers from the friends array as its being compared to the user answers
     var tempAnswers = [];
 
@@ -26,8 +26,8 @@ app.post("/api/friends", function(req, res) {
         
         var newCount = 0;
 
-        for (var i = 0; i < tempAnswers.length; i++) {
-            newCount += Math.abs(parseInt(tempAnswers[i]) - parseInt(userAnswers[i]))
+        for (var t = 0; t < tempAnswers.length; t++) {
+            newCount += Math.abs(parseInt(tempAnswers[t]) - parseInt(userAnswers[t]))
         }
         if (newCount < currentCount) {
             bestFriend = tempMatch;
@@ -39,4 +39,4 @@ app.post("/api/friends", function(req, res) {
     res.json(bestFriend);
     friends.push(req.body);
     });
-}
+};
